@@ -1,2 +1,1 @@
-TA_related
-==========
+Test library created during Robotframework test automation developement
