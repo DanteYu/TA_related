@@ -27,8 +27,8 @@ class EM_InterfaceVerification(object):
     
     def createLocalExpectScript(self, q3_mml_command):
         q3_mml_command = q3_mml_command + '\n'
-        self.expect_list = ['#! /usr/bin/expect\n', 'set timeout 30\n', q3_mml_command, 'expect "MAIN LEVEL COMMAND\n', 'send "ZEEI;\r"\n', 'expect eof\n']
-        filename= tempfile.mkdtemp('.exp', 'q3_mml_')
+        self.expect_list = ['#! /usr/bin/expect\n', 'set timeout 30\n', q3_mml_command, 'expect "MAIN LEVEL COMMAND"\n', 'send "ZEEI;\\r"\n', 'expect eof\n']
+        (_ , filename) = tempfile.mkstemp('.exp', 'q3_mml_')
         f = open(filename, 'w')
         f.writelines(self.expect_list)
         f.close()
@@ -44,7 +44,7 @@ class EM_InterfaceVerification(object):
         return self.q3_mml_command
     
     def returnExpectFilePath(self, remote_directory):
-        return remote_directory + '/' + self.filecontent[0]
+        return remote_directory + '/' + self.filecontent[0].split('\\')[-1]
     
     
     def returnQ3MMLExpectCommand(self, expect_file_path):
