@@ -1,12 +1,13 @@
 from test_case_base import TestCaseBase
 from Page_Function import Function_Page_Generator
 import unittest
+from Test_Data import *
 
 class TestCaseOne(TestCaseBase):
 
 
     def test_case_one(self):
-        self.open_browser_and_navigate("www.google.com")
+        self.open_browser_and_navigate(URL)
         self.login_page_function.login()
 
         
