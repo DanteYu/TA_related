@@ -8,6 +8,7 @@ import unittest
 
 class TestCaseBase(unittest.TestCase):
     def setUp(self):
+	super(TestCaseBase, self).__init__(methodName="runTest")
         self.driver =webdriver.Firefox()
         self.driver.implicitly_wait(30)
         self.verificationErrors = []
