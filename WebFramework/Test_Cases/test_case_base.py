@@ -9,7 +9,16 @@ import unittest
 class TestCaseBase(unittest.TestCase):
     def setUp(self):
 	super(TestCaseBase, self).__init__(methodName="runTest")
-        self.driver =webdriver.Firefox()
+	#download PDF file automatically
+	fp = webdriver.FirefoxProfile()
+	fp.set_preference("browser.download.folderList",2)
+	fp.set_preference("browser.download.manager.showWhenStarting",False)
+	fp.set_preference("browser.download.dir", os.getcwd())
+	fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+	fp.set_preference("pdfjs.disabled", True)
+	fp.set_preference("plugin.scan.plid.all", False)
+	fp.set_preference("plugin.scan.Acrobat", "99.0") 
+	self.driver =webdriver.Firefox(firefox_profile=fp)
         self.driver.implicitly_wait(30)
         self.verificationErrors = []
         function_pages_generator = Function_Page_Generator.FunctionPageGenertor(self.driver)
