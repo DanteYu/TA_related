@@ -1,0 +1,73 @@
+from xml.dom import minidom
+import DBOperation
+
+class XMLFileParser(object):
+    """ class used for parse quote xml and application xml
+    """
+
+    def __init__(self, xmlfilepath):
+        self.xmlfilepath = xmlfilepath
+        self.xmlfile = minidom.parse(self.xmlfilepath)
+        self.root = self.xmlfile.documentElement
+
+    def get_element_list_by_tag(self, tag):
+        elementlist = self.root.getElementsByTagName(tag)
+        return elementlist
+
+    def get_element_list_by_element_and_tag(self, element, tag):
+        elementlist = element.getElementsByTagName(tag)
+        return elementlist
+
+    def get_child_nodes_list_by_element(self, element):
+        childnodeslist = element.childNodes
+        return childnodeslist
+
+    def get_node_name_by_element(self, element):
+        nodename = element.nodeName
+        return nodename
+
+    def get_XML_by_element(self, element):
+        xmlstring = element.toxml()
+        return  xmlstring
+
+    def get_node_value_by_element(self,  element):
+        nodevalue = element.nodeValue
+        return nodevalue
+
+    def get_node_type_by_element(self, element):
+        nodetype = element.nodeType
+        return nodetype
+
+#the data --> elementlist[0].childNodes[0].data
+    def get_tag_text(self, element, tag):
+        node = element.getElementsByTagName(tag)[0]
+        tagtext = ""
+        for node in node.childNodes:
+            if node.nodeType in ( node.TEXT_NODE, node.CDATA_SECTION_NODE):
+                rc = tagtext + node.data
+        return tagtext
+
+    def get_tag_text_list_by_mulitple_tag(self,tag, subtag):
+        elementlist = xmlparser.get_element_list_by_tag(tag)
+        tagtext_list = []
+        for eachelement in elementlist:
+            items = xmlparser.get_element_list_by_element_and_tag(eachelement, subtag)
+            for eachitem in items:
+                nodes = xmlparser.get_child_nodes_list_by_element(eachitem)
+                for node in nodes:
+                    if node.nodeType in ( node.TEXT_NODE, node.CDATA_SECTION_NODE):
+                        tagtext_list.append(node.data)
+        return tagtext_list
+
+
+
+
+if __name__ =='__main__':
+
+    db_op = DBOperation.DBOperation()
+    result = db_op.return_select_sql(db_op.db_connection_string, sql_string")
+    f = open('test.xml', 'w')
+    f.write(str(result[0][0]))
+    f.close()
+    xmlparser = XMLFileParser(r"test.xml")
+    print xmlparser.get_tag_text_list_by_mulitple_tag("test", "test")
