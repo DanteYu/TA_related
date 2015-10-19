@@ -7,5 +7,5 @@ class LoginPageFunction(LoginPage):
         self.return_username_textfield().send_keys(username)
         self.return_password_textfield().clear()
         self.return_password_textfield().send_keys(password)
-        submit_button = self.return_submit_button()
+        submit_button = self.driver.find_element(LoginPage.SUBMIT_BUTTON)
         submit_button.click()
