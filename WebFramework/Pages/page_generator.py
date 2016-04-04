@@ -1,4 +1,4 @@
-import Login_Page_Function
+import login_page_function
 
 class FunctionPageGenertor(object):
 
@@ -8,7 +8,7 @@ class FunctionPageGenertor(object):
 
     def login_page_generator(self):
         driver = self.driver
-        self.login_page_function = Login_Page_Function.LoginPageFunction(driver)
+        self.login_page_function = login_page_function.LoginPageFunction(driver)
         return self.login_page_function
 
 

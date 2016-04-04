@@ -3,7 +3,7 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-from Pages import Function_Page_Generator
+from pages import page_generator
 import unittest
 import os
 
@@ -23,7 +23,7 @@ class TestCaseBase(unittest.TestCase):
         self.driver =webdriver.Firefox(firefox_profile=fp)
         self.driver.implicitly_wait(30)
         self.verificationErrors = []
-        function_pages_generator = Function_Page_Generator.FunctionPageGenertor(self.driver)
+        function_pages_generator = page_generator.FunctionPageGenertor(self.driver)
         self.login_page_function = function_pages_generator.login_page_generator()
 
     def open_browser_and_navigate(self, url):

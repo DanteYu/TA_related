@@ -1,4 +1,4 @@
-from PageLocator.Login_Page import LoginPage
+from page_locator.login_page import LoginPage
 
 class LoginPageFunction(LoginPage):
 
