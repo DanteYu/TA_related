@@ -4,13 +4,12 @@ from test_data.data1 import URL
 
 class TestCaseOne(TestCaseBase):
 
-
     def test_case_one(self):
         self.open_browser_and_navigate(URL)
         self.login_page_function.login()
 
-        
-if __name__ == '__main__':
-    unittest.main()
+
+# if __name__ == '__main__':
+#     unittest.main()
 
 
