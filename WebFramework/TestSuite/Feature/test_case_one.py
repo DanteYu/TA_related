@@ -1,6 +1,6 @@
-from test_case_base import TestCaseBase
+from TestSuite.test_case_base import TestCaseBase
 import unittest
-from Test_Data import *
+from TestData.test_data import URL
 
 class TestCaseOne(TestCaseBase):
 
