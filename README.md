@@ -9,5 +9,5 @@ This repo will contain different test automation demo using different programmin
 2. UI testing
    * java + concordion + webdriver
    * js + jasmine + protractor
-   * python + behave
-   * python + webdriver + unittest
+   * [python + behave](https://github.com/DanteYu/Test_Automation_Demo/tree/master/UITesting/python_behave)
+   * [python + webdriver + unittest](https://github.com/DanteYu/Test_Automation_Demo/tree/master/UITesting/python_webdriver_unittest)
