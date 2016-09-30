@@ -2,6 +2,12 @@
 
 
 ##Project Structure
+1. pages - contains all locators and basic page operation methods
+2. pagehandler - contains business logic methods for every pages
+3. navigator - contains methods which can navigate to certain page with business logic
+4. specs - protractor specification
+5. data - test data
+6. config - protractor configuration
 
 ##Setup
 
