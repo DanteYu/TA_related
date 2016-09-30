@@ -48,9 +48,13 @@ var calculatorPageHandler = function() {
         return browser.getTitle();
     };
 
+    calculatorPageHandler.isPageLoaded = function(){
+        return browser.wait(function(){
+            return calculatorPage.isHeadingPresented() && calculatorPage.isDefaultZeroDisplayed();
+        })
+    };
+
     return calculatorPageHandler;
 };
 
 module.exports = calculatorPageHandler;
-
-

@@ -15,6 +15,8 @@ var calculatorPage = function() {
     calculatorPage.divisionOperator = element(by.xpath("//select[@ng-model='operator']//option[@value='DIVISION']"));
     calculatorPage.historyTable = element(by.repeater('result in memory'));
     calculatorPage.timeAndResultInHistoryTable = element.all(by.xpath("//tr[@class='ng-scope']//td[@class='ng-binding']"));
+    calculatorPage.defaultZero = element(by.xpath("//h2[contains(text(), '0')]"));
+    calculatorPage.superCalculatorHeading = element(by.xpath("//h3[contains(text(), 'Super Calculator')"))
 
     calculatorPage.getTimeAndResultInHistoryTable = function(){
         return this.timeAndResultInHistoryTable;
@@ -61,6 +63,16 @@ var calculatorPage = function() {
 
     calculatorPage.getLatestResult = function() {
         return this.latestResult.getText();
+    };
+
+    calculatorPage.isDefaultZeroDisplayed = function(){
+        return this.defaultZero.isDisplayed();
+    };
+
+    calculatorPage.isHeadingPresented = function(){
+        return browser.wait(function(){
+            return browser.isElementPresent(by.xpath("//h3[contains(text(), 'Super Calculator')]"));
+        })
     };
 
     return calculatorPage;

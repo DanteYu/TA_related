@@ -13,7 +13,8 @@ describe('calculator function test', function() {
         browser.executeScript('window.localStorage.clear();');
     });
 
-    it('should have a title', function () {
+    it('page loaded and should have a title', function () {
+        expect(calculatorPageHandler.isPageLoaded()).toBe(true);
         expect(calculatorPageHandler.getPageTitle()).toEqual(calculatorPageData.title);
         console.log('calculator page is OK');
     });
