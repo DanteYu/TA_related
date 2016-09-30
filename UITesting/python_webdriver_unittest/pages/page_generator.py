@@ -1,4 +1,4 @@
-from pages.Login_Page_Function import LoginPageFunction
+from pages.login_page_funtion import LoginPageFunction
 
 class FunctionPageGenertor(object):
 
