@@ -1,0 +1,4 @@
+*.pyc
+*.TestSuite.xml
+*.xml
+.idea/**

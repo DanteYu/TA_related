@@ -1,4 +1,4 @@
-#NCP Protractor Test Automation
+# UI Test Automation using *javascrip* + *protractor* + *jasmine*
 
 
 ##Project Structure
