@@ -1,5 +1,5 @@
 from behave import *
-from Util.JSONParsers.MovieInformationParser import MovieInformationParser
+from Util.JSONParsers.MovieResponseParser import MovieInformationParser
 from Util import RequestService
 from TestData.MovieData.MovieID import TheShawshankRedemption_ID
 
