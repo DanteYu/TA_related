@@ -8,7 +8,7 @@ from TestData.MovieData.MovieID import TheShawshankRedemption_ID
 def step_impl(context):
     assert TheShawshankRedemption_ID is not False
 
-@when('I send request to Douban TOP250 API')
+@when('I send request to Douban TOP250 API and get response')
 def step_impl(context):
         context.response = RequestService._get_GET_response(RequestService.get_movie_api_top250())
 

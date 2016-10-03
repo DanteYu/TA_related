@@ -7,9 +7,9 @@ from TestData.MovieData.ActorID import MattDamonID
 
 @given('I have the The BourneIdentity ID')
 def step_impl(context):
-    pass
+    assert TheBourneIdentity_ID is not False
 
-@when('I send request to Douban API')
+@when('I send request to Douban API and get response')
 def step_impl(context):
         context.response = RequestService._get_GET_response(RequestService.get_movie_api_with_movieid(TheBourneIdentity_ID))
 
