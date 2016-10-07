@@ -1,3 +1,4 @@
+@movie
 Feature: Display latest movie data in our application using Douban API
   In order to support getting the latest movie data to our application
   As an application user

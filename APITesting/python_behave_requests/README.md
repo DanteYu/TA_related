@@ -10,3 +10,4 @@
 ##Running tests
 
 `behave`
+`behave --tags=book`
