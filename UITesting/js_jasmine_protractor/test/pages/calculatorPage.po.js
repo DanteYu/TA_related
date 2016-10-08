@@ -16,7 +16,7 @@ var calculatorPage = function() {
     calculatorPage.historyTable = element(by.repeater('result in memory'));
     calculatorPage.timeAndResultInHistoryTable = element.all(by.xpath("//tr[@class='ng-scope']//td[@class='ng-binding']"));
     calculatorPage.defaultZero = element(by.xpath("//h2[contains(text(), '0')]"));
-    calculatorPage.superCalculatorHeading = element(by.xpath("//h3[contains(text(), 'Super Calculator')"))
+    calculatorPage.superCalculatorHeading = element(by.xpath("//h3[contains(text(), 'Super Calculator')]"))
 
     calculatorPage.getTimeAndResultInHistoryTable = function(){
         return this.timeAndResultInHistoryTable;
