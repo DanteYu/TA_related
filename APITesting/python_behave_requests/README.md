@@ -12,3 +12,5 @@
 `behave`
 
 `behave --tags=book`
+
+`behave ./features/BookInformationAPITest.feature`
