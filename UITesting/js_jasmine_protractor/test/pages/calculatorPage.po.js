@@ -57,7 +57,10 @@ var calculatorPage = function() {
         this.selectOperator.sendKeys("-");
     };
 
+    //add Expectation for checking an element is visible and enabled such that you can click it
     calculatorPage.clickGoButton = function() {
+        var EC = protractor.ExpectedConditions;
+        browser.wait(EC.elementToBeClickable(this.goButton), 10000);
         this.goButton.click();
     };
 
