@@ -23,38 +23,54 @@ var calculatorPage = function() {
     };
 
     calculatorPage.enterFirstNumber = function(firstnumber) {
-        this.firstNumber.sendKeys(firstnumber);
+        if (this.firstNumber.isDisplayed()){
+            this.firstNumber.clear();
+            this.firstNumber.sendKeys(firstnumber);
+        };
     };
 
     calculatorPage.enterSecondNumber = function(secondnumber) {
-        this.secondNumber.sendKeys(secondnumber);
+        if(this.secondNumber.isDisplayed()){
+            this.secondNumber.clear();
+            this.secondNumber.sendKeys(secondnumber);
+        }
     };
 
     calculatorPage.enterFirstAndSecondNumber = function(firstnumber, secondnumber) {
-        this.firstNumber.sendKeys(firstnumber);
-        this.secondNumber.sendKeys(secondnumber);
+        this.enterFirstNumber(firstnumber);
+        this.enterSecondNumber(secondnumber);
     };
 
     //There are two ways to select a value from a dropdown list
     //firstly, use sendKeys("{text}"). The locator should be the select locator.
     calculatorPage.selectAdditionOperator = function(){
-        this.selectOperator.sendKeys("+");
+        if (this.selectOperator.isDisplayed()){
+            this.selectOperator.sendKeys("+");
+        }
     };
     // use click(). The locator should be the option locator.
     calculatorPage.selectDivisionOperator = function(){
-        this.divisionOperator.click();
+        if (this.divisionOperator.isDisplayed()){
+            this.divisionOperator.click();
+        }
     };
 
     calculatorPage.selectModuloOperator = function(){
-        this.selectOperator.sendKeys("%");
+        if (this.selectOperator.isDisplayed()){
+            this.selectOperator.sendKeys("%");
+        }
     };
 
     calculatorPage.selectMultiplicationOperator = function(){
-        this.selectOperator.sendKeys("*");
+        if (this.selectOperator.isDisplayed()){
+            this.selectOperator.sendKeys("*");
+        }
     };
 
     calculatorPage.selectSubtractionOperator = function(){
-        this.selectOperator.sendKeys("-");
+        if (this.selectOperator.isDisplayed()){
+            this.selectOperator.sendKeys("-");
+        }
     };
 
     //add Expectation for checking an element is visible and enabled such that you can click it
@@ -65,7 +81,14 @@ var calculatorPage = function() {
     };
 
     calculatorPage.getLatestResult = function() {
-        return this.latestResult.getText();
+        if (this.latestResult.isDisplayed()){
+            return this.latestResult.getText();
+        }
+        else {
+            browser.wait(this.latestResult, 5000).then(function(){
+                return this.latestResult.getText();
+            })
+        };
     };
 
     calculatorPage.isDefaultZeroDisplayed = function(){
