@@ -34,6 +34,9 @@ describe('calculator hisotry table test', function() {
         expect(latestResult5).toEqual(calculatorPageData.result_subtraction);
 
         calculatorPageNavigator.getTimeAndResultAtHistoryTable().then(function(items){
+            for (var encounter=0; encounter < items.length; encounter++){
+            expect(items[encounter].isDisplayed()).toBe(true);
+        };
             expect(items.length / 2).toEqual(5);
             expect(items[1].getText()).toEqual(latestResult5);
             expect(items[3].getText()).toEqual(latestResult4);
