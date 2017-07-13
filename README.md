@@ -3,7 +3,7 @@ This repo will contain different test automation demo using different programmin
 
 1. API testing
    * java + TestNG + RestAssured
-   * js + mocha + chai + + karma +supertest
+   * js + mocha + chai + karma + supertest
    * [python + behave + request](https://github.com/DanteYu/Test_Automation_Demo/tree/master/APITesting/python_behave_requests)
 
 
