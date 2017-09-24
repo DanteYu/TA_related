@@ -6,3 +6,4 @@ nbproject
 target
 **/*.log
 reports
+package-lock.json

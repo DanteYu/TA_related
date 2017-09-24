@@ -9,8 +9,8 @@
   },
   "scripts": {
     "setup": "npm install --save-dev --no-spin && npm prune --no-spin && node node_modules/protractor/bin/webdriver-manager update --standalone",
-    "test": "node_modules/.bin/protractor test/config/conf.js --verbose" 
-     },
+    "test": "node_modules/.bin/protractor test/config/conf.js --verbose"
+  },
   "author": "",
   "license": "ISC"
 }
