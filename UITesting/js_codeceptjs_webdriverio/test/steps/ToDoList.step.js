@@ -17,12 +17,16 @@ module.exports = {
 
   // insert your locators and methods here
 
-  addToDoTask: function(task_text){
+  navigate2ToDoListPage: function(){
     mainPage.clickVueJSLink();
+  },
+
+  addToDoTask: function(task_text){
     ToDoListPage.enterTask(task_text);
   },
 
-  addAnotherToDoTask: function(task_text){
+  navigate2ToDoListPageAndAddToDoTask: function(task_text){
+    mainPage.clickVueJSLink();
     ToDoListPage.enterTask(task_text);
   }
 
