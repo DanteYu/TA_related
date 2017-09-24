@@ -1,0 +1,9 @@
+.idea
+*.iml
+output
+node_modules
+mochawesome-report
+package-lock.json
+/debug.log
+ _output/
+report/

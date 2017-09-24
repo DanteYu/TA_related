@@ -1,0 +1,11 @@
+{
+  "name": "js_codeceptjs_webdriverio",
+  "version": "1.0.0",
+  "description": "Automation Test demo for Codeceptjs with Helper webdriverio",
+  "main": "steps_file.js",
+  "scripts": {
+    "test": "codeceptjs run --debug --reporter mochawesome"
+  },
+  "author": "DanteYu",
+  "license": "ISC"
+}
