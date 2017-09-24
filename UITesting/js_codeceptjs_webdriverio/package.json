@@ -2,9 +2,16 @@
   "name": "js_codeceptjs_webdriverio",
   "version": "1.0.0",
   "description": "Automation Test demo for Codeceptjs with Helper webdriverio",
-  "main": "steps_file.js",
   "scripts": {
-    "test": "codeceptjs run --debug --reporter mochawesome"
+    "test": "codeceptjs run -c codecept.json --debug --reporter mochawesome"
+  },
+  "dependencies": {
+    "browserstacktunnel-wrapper": "^2.0.1",
+    "codeceptjs": "^1.0.3",
+    "mocha-junit-reporter": "^1.13.0",
+    "mochawesome": "^2.3.1",
+    "selenium-standalone": "^6.9.0",
+    "webdriverio": "^4.8.0"
   },
   "author": "DanteYu",
   "license": "ISC"

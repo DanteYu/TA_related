@@ -1,12 +1,36 @@
 {
-  "tests": "./specs/*_test.js",
-  "timeout": 10000,
   "output": "./output",
-  "helpers": {},
-  "include": {
-    "I": "./steps_file.js"
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://todomvc.com/",
+      "browser": "chrome"
+    },
+    "MyHelper": {
+      "require": "./test/helpers/custom_helpers.js",
+      "defaultHost": "http://todomvc.com/"
+    },
+    "Mochawesome": {
+      "uniqueScreenshotNames": "true"
+    }
   },
-  "bootstrap": false,
-  "mocha": {},
+  "include": {
+    "I": "./test/steps_file.js",
+    "mainPage": "./test/pages/MainPage.po.js",
+    "toDoListPage": "./test/pages/ToDoListPage.po.js",
+    "toDoListStep": "./test/steps/ToDoList.step.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "output",
+      "mochaFile": "output/result.xml"
+    }
+  },
+  "bootstrap": null,
+  "teardown": null,
+  "hooks": [
+    "./test/util/custom_hooks/event_listener.js"
+  ],
+  "tests": "./test/specs/*Test.spec.js",
+  "timeout": 10000,
   "name": "js_codeceptjs_webdriverio"
 }
