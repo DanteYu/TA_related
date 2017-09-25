@@ -11,8 +11,76 @@ module.exports = function() {
       toDoListStep.addToDoTask(task_text);
     },
 
-    addAnotherToDoTask : function(task_text){
-      toDoListStep.addAnotherToDoTask(task_text);
+    navigateToDoListPage : function(){
+      toDoListStep.navigateToDoListPage();
+    },
+
+    navigateToDoListPageAndAddToDoTask: function(task_text){
+      toDoListStep.navigateToDoListPageAndAddToDoTask(task_text);
+    },
+
+    completeFirstTask: function(){
+      toDoListStep.completeFirstTask();
+    },
+
+    completeAllTasks: function(){
+      toDoListStep.completeAllTasks();
+    },
+
+    seeClearCompletedButton: function(){
+      toDoListStep.seeClearCompletedButton();
+    },
+
+    seeAndClickClearCompletedButton: function(){
+      toDoListStep.seeAndClickClearCompletedButton();
+    },
+
+    deleteFirstTask: function(){
+      toDoListStep.deleteFirstTask();
+    },
+
+    deleteSecondTask: function(){
+      toDoListStep.deleteSecondTask();
+    },
+
+    displayAllTasks: function(){
+      toDoListStep.displayAllTasks();
+    },
+
+    displayActiveTasks: function(){
+      toDoListStep.displayActiveTasks();
+    },
+
+    displayCompletedTasks: function(){
+      toDoListStep.displayCompletedTasks();
+    },
+
+    seeFirstTaskCheckboxIsChecked: function(){
+      toDoListStep.seeFirstTaskCheckboxIsChecked();
+    },
+
+    seeSecondTaskCheckboxIsChecked: function(){
+      toDoListStep.seeSecondTaskCheckboxIsChecked();
+    },
+
+    dontSeeSecondTaskCheckboxIsChecked: function(){
+      toDoListStep.dontSeeSecondTaskCheckboxIsChecked();
+    },
+
+    displayAllTasks: function(){
+      toDoListStep.displayAllTasks();
+    },
+
+    displayActiveTasks: function(){
+      toDoListStep.displayActiveTasks();
+    },
+
+    displayCompletedTasks: function(){
+      toDoListStep.displayCompletedTasks();
+    },
+
+    editFirstTask: function(task_text){
+      toDoListStep.editFirstTask(task_text);
     }
 
   });

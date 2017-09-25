@@ -18,13 +18,13 @@ module.exports = {
     I.pressKey('Enter');
   },
 
-  completeTask : function(){
+  completeAllTasks : function(){
     I.seeElement(ToDoListLocators.completeAllTasksCheckbox);
     I.checkOption(ToDoListLocators.completeAllTasksCheckbox);
   },
 
   seeClearCompletedButton : function(){
-    I.seeElement(ToDoListLocators.clearCompletedFilterButton);
+    I.see(ToDoListLocators.clearCompletedFilterButton);
   },
 
   clickClearCompleteButton : function(){
@@ -36,34 +36,54 @@ module.exports = {
     I.checkOption(ToDoListLocators.firstTaskCheckBox);
   },
 
+  seeFirstTaskCheckboxIsChecked : function(){
+    I.seeCheckboxIsChecked(ToDoListLocators.firstTaskCheckBox);
+  },
+
+  seeSecondTaskCheckboxIsChecked : function(){
+    I.seeCheckboxIsChecked(ToDoListLocators.secondTaskCheckBox);
+  },
+
   completeSecondTask : function(){
     I.seeElement(ToDoListLocators.secondTaskCheckBox);
     I.checkOption(ToDoListLocators.secondTaskCheckBox);
   },
 
+  dontSeeSecondTaskCheckboxIsChecked : function(){
+    I.dontSeeCheckboxIsChecked(ToDoListLocators.secondTaskCheckBox);
+  },
+
   deleteFirstTask : function(){
+    I.moveCursorTo(ToDoListLocators.firstTaskLabel);
     I.seeElement(ToDoListLocators.firstDestoryButton);
-    I.check(ToDoListLocators.firstDestoryButton);
+    I.click(ToDoListLocators.firstDestoryButton);
   },
 
   deleteSecondTask : function(){
+    I.moveCursorTo(ToDoListLocators.secondTaskLabel);
     I.seeElement(ToDoListLocators.secondDestoryButton);
-    I.check(ToDoListLocators.secondDestoryButton);
+    I.click(ToDoListLocators.secondDestoryButton);
   },
 
   displayAllTasks : function(){
-    I.seeElement(ToDoListLocators.allFilterLink);
+    I.see(ToDoListLocators.allFilterLink);
     I.click(ToDoListLocators.allFilterLink);
   },
 
   displayActiveTasks : function(){
-    I.seeElement(ToDoListLocators.allFilterLink);
+    I.see(ToDoListLocators.activeFilterLink);
     I.click(ToDoListLocators.activeFilterLink);
   },
 
   displayCompletedTasks : function(){
-    I.seeElement(ToDoListLocators.allFilterLink);
-    I.click(ToDoListLocators.activeFilterLink);
+    I.see(ToDoListLocators.completedFilterLink);
+    I.click(ToDoListLocators.completedFilterLink);
+  },
+
+  editFirstTask: function(task_text){
+    I.doubleClick(ToDoListLocators.firstTaskLabel);
+    I.fillField(ToDoListLocators.firstTaskTextField, task_text);
+    I.pressKey('Enter');
   }
 
 }

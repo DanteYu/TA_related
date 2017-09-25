@@ -6,13 +6,19 @@ module.exports = {
     xpath : '/html/body/section/header/input'
   },
 
+  firstTaskLabel: {
+    xpath : '/html/body/section/section/ul/li[1]/div/label'
+  },
+
+  firstTaskTextField: {
+    xpath : '/html/body/section/section/ul/li[1]/input'
+  },
+
   completeAllTasksCheckbox : {
     xpath : '/html/body/section/section/input'
   },
 
-  clearCompletedFilterButton : {
-    text : 'Clear Completed'
-  },
+  clearCompletedFilterButton :  'Clear completed',
 
   firstTaskCheckBox : {
     xpath : '/html/body/section/section/ul/li[1]/div/input'
@@ -20,6 +26,10 @@ module.exports = {
 
   firstDestoryButton : {
     css : 'body > section > section > ul > li:nth-child(1) > div > button'
+  },
+
+  secondTaskLabel: {
+    xpath : '/html/body/section/section/ul/li[2]/div/label'
   },
 
   secondTaskCheckBox : {
@@ -34,16 +44,10 @@ module.exports = {
     xpath : '/html/body/section/section/ul/li[3]/div/input'
   },
 
-  allFilterLink : {
-    text : 'All'
-  },
+  allFilterLink :  'All',
 
-  activeFilterLink : {
-    text : 'Active'
-  },
+  activeFilterLink : 'Active',
 
-  completedFilterLink : {
-    text : 'Completed'
-  }
+  completedFilterLink : 'Completed'
 
 }

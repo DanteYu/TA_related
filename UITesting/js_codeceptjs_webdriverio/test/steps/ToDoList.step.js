@@ -1,7 +1,7 @@
 
 'use strict';
 
-let I, mainPage, ToDoListPage;
+let I, mainPage, toDoListPage;
 
 const mainPageUrl = '/';
 
@@ -11,23 +11,76 @@ module.exports = {
     I = require('../steps_file.js')();
     mainPage = require('../pages/MainPage.po.js');
     mainPage._init();
-    ToDoListPage = require('../pages/ToDoListPage.po.js');
-    ToDoListPage._init();
+    toDoListPage = require('../pages/ToDoListPage.po.js');
+    toDoListPage._init();
   },
 
   // insert your locators and methods here
 
-  navigate2ToDoListPage: function(){
+  navigateToDoListPage: function(){
     mainPage.clickVueJSLink();
   },
 
   addToDoTask: function(task_text){
-    ToDoListPage.enterTask(task_text);
+    toDoListPage.enterTask(task_text);
   },
 
-  navigate2ToDoListPageAndAddToDoTask: function(task_text){
-    mainPage.clickVueJSLink();
-    ToDoListPage.enterTask(task_text);
+  navigateToDoListPageAndAddToDoTask: function(task_text){
+    this.navigateToDoListPage();
+    this.addToDoTask(task_text);
+  },
+
+  completeFirstTask: function(){
+    toDoListPage.completeFirstTask();
+  },
+
+  completeAllTasks: function(){
+    toDoListPage.completeAllTasks();
+  },
+
+  seeClearCompletedButton: function(){
+    toDoListPage.seeClearCompletedButton();
+  },
+
+  seeAndClickClearCompletedButton: function(){
+    toDoListPage.seeClearCompletedButton();
+    toDoListPage.clickClearCompleteButton();
+  },
+
+  deleteFirstTask: function(){
+    toDoListPage.deleteFirstTask();
+  },
+
+  deleteSecondTask: function(){
+    toDoListPage.deleteSecondTask();
+  },
+
+  displayAllTasks: function(){
+    toDoListPage.displayAllTasks();
+  },
+
+  displayActiveTasks: function(){
+    toDoListPage.displayActiveTasks();
+  },
+
+  displayCompletedTasks: function(){
+    toDoListPage.displayCompletedTasks();
+  },
+
+  seeFirstTaskCheckboxIsChecked: function(){
+    toDoListPage.seeFirstTaskCheckboxIsChecked();
+  },
+
+  seeSecondTaskCheckboxIsChecked: function(){
+    toDoListPage.seeSecondTaskCheckboxIsChecked();
+  },
+
+  dontSeeSecondTaskCheckboxIsChecked: function(){
+    toDoListPage.dontSeeSecondTaskCheckboxIsChecked();
+  },
+
+  editFirstTask: function(task_text){
+    toDoListPage.editFirstTask(task_text);
   }
 
 }
