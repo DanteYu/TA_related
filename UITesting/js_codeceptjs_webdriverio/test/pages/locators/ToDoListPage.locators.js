@@ -48,6 +48,14 @@ module.exports = {
 
   activeFilterLink : 'Active',
 
-  completedFilterLink : 'Completed'
+  completedFilterLink : 'Completed',
+
+  counterText : {
+    xpath : '/html/body/section/footer/span'
+  },
+
+  footerText : {
+    xpath : '/html/body/footer/p[1]'
+  }
 
 }

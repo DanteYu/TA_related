@@ -85,5 +85,4 @@ module.exports = {
     I.fillField(ToDoListLocators.firstTaskTextField, task_text);
     I.pressKey('Enter');
   }
-
 }

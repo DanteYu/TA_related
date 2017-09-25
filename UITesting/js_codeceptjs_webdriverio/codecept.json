@@ -3,7 +3,8 @@
   "helpers": {
     "WebDriverIO": {
       "url": "http://todomvc.com/",
-      "browser": "chrome"
+      "browser": "chrome",
+      "smartWait": 5000
     },
     "MyHelper": {
       "require": "./test/helpers/custom_helpers.js",
@@ -25,12 +26,33 @@
       "mochaFile": "output/result.xml"
     }
   },
-  "bootstrap": null,
-  "teardown": null,
+  "bootstrap": "./test/util/bootstrapAndTeardown/selenium-standalone-start.js",
+  "teardown": "./test/util/bootstrapAndTeardown/selenium-standalone-stop.js",
   "hooks": [
     "./test/util/custom_hooks/event_listener.js"
   ],
   "tests": "./test/specs/*Test.spec.js",
   "timeout": 10000,
-  "name": "js_codeceptjs_webdriverio"
+  "name": "js_codeceptjs_webdriverio",
+  "multiple": {
+  "basic": {
+    "browsers": ["chrome", "firefox"]
+  },
+  "smoke": {
+    "grep": "@smoke",
+    "browsers": [
+      "firefox",
+      {"browser": "chrome", "windowSize": "maximize"},
+      {"browser": "chrome", "windowSize": "1200x840"}
+    ]
+  },
+  "regression": {
+    "grep": "@regression",
+    "browsers": [
+      "firefox",
+      {"browser": "chrome", "windowSize": "maximize"},
+      {"browser": "chrome", "windowSize": "1200x840"}
+    ]
+  }
+}
 }

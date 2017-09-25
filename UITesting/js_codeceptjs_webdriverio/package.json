@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Automation Test demo for Codeceptjs with Helper webdriverio",
   "scripts": {
-    "test": "codeceptjs run -c codecept.json --debug --reporter mochawesome"
+    "test": "codeceptjs run -c codecept.json --debug --reporter mochawesome",
+    "smoke": "codeceptjs run -c codecept.json --debug --grep @smoke --reporter mochawesome",
+    "regression": "codeceptjs run -c codecept.json --debug --grep @regression --reporter mochawesome",
+    "test_chrome_firefox": "codeceptjs run-multiple --all --debug --reporter mochawesome",
+    "regression_chrome": "codeceptjs run-multiple regression:chrome --debug --reporter mochawesome",
+    "smoke_firefox": "codeceptjs run-multiple smoke:firefox --debug --reporter mochawesome"
   },
   "dependencies": {
     "browserstacktunnel-wrapper": "^2.0.1",

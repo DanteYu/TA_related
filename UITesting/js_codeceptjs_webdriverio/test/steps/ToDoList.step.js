@@ -19,6 +19,8 @@ module.exports = {
 
   navigateToDoListPage: function(){
     mainPage.clickVueJSLink();
+    // I.wait(10);
+    // I.refreshPage();
   },
 
   addToDoTask: function(task_text){
