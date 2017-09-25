@@ -18,6 +18,10 @@ Background((I) => {
   I.seeTitleEquals('TodoMVC');
 });
 
+After((I) => {
+  I.clearCookie();
+});
+
 Scenario('I can add a to-do task @regression', function*(I) {
   I.navigateToDoListPage();
   I.see('todos');
