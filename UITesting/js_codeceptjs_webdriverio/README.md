@@ -11,10 +11,10 @@
 
 #### 项目目录结构
 ```
-|-- UITesting
+|-- js_codeceptjs_webdriverio
     |-- .gitignore   
     |-- README.md  
-    |-- codecept.json    //codeceptjs的配置文件。详细内容可以参考[这里](https://danteyu.github.io/2017/09/12/codeceptjs5/)
+    |-- codecept.json    //codeceptjs的配置文件。详细内容可以参考 https://danteyu.github.io/2017/09/12/codeceptjs5/
     |-- package.json    // npm的配置文件，内容包含了很多项目元数据。依赖的包和测试执行命令都在此文件中定义。
     |-- output   //测试报告或测试失败输出的截图会放在这个目录下
     |   |-- I_can_delete_a_to-do_task.failed.png
