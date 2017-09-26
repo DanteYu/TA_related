@@ -1,7 +1,7 @@
 
 此项目是一个[codeceptjs](http://codecept.io/)的简单demo，使用了[webdriverio](http://webdriver.io/)作为Helper并且引用了[mochawesome](https://www.npmjs.com/package/mochawesome)作为reporter。
 
-测试对象为 [TODOMVC]（http://todomvc.com/examples/vue/）
+测试对象为 [TODOMVC](http://todomvc.com/examples/vue/)
 
 因为此demo目的是展示更多codeceptjs的功能，所以测试设计方面略有不必要的重复，比如
 * 测试场景有些重复步骤
@@ -10,7 +10,7 @@
 更多的文章可以参考[这里](https://danteyu.github.io/tags/#codeceptjs)
 
 #### 项目目录结构
-
+```
 |-- UITesting
     |-- .gitignore   
     |-- README.md  
@@ -61,7 +61,7 @@
             |   |-- selenium-standalone-stop.js
             |-- custom_hooks  //可以自定义一些hooks，用于扩展codeceptjs的功能
                 |-- event_listener.js
-
+```
 
 #### 环境设置
 
