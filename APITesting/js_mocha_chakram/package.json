@@ -1,0 +1,16 @@
+{
+  "name": "chakram_demo",
+  "version": "1.0.0",
+  "description": "project for chakram",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --reporter=mochawesome"
+  },
+  "author": "DanteYu",
+  "license": "ISC",
+  "devDependencies": {
+    "chakram": "^1.5.0",
+    "mochawesome": "^2.3.1",
+    "mddir": "^1.1.0"
+  }
+}

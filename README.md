@@ -3,6 +3,7 @@ This repo will contain different test automation demo using different programmin
 
 1. API testing
    * [python + behave + request](https://github.com/DanteYu/Test_Automation_Demo/tree/master/APITesting/python_behave_requests)
+   * [js + mocha + chakram](https://github.com/DanteYu/Test_Automation_Demo/tree/master/APITesting/js_mocha_chakram)
 
 
 2. UI testing
