@@ -4,7 +4,7 @@
   "description": "project for chakram",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive --reporter=mochawesome"
+    "test": "mocha --recursive --reporter mochawesome"
   },
   "author": "DanteYu",
   "license": "ISC",
