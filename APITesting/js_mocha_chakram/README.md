@@ -6,7 +6,7 @@
 * [豆瓣 API V2](https://developers.douban.com/wiki/?title=api_v2)提供的电影信息。
 
 #### 项目结构
-
+```md
 |-- js_mocha_chakram
     |-- .gitignore
     |-- README.md
@@ -22,6 +22,7 @@
         |-- headerTest.js
         |-- responseTimeTest.js
         |-- statusCodeTest.js
+```
 
 #### 运行测试
 使用`npm install`来安装`chakram`到本地，使用`npm test`运行测试
