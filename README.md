@@ -12,4 +12,4 @@ This repo will contain different test automation demo using different programmin
    * [python + webdriver + unittest](https://github.com/DanteYu/Test_Automation_Demo/tree/master/UITesting/python_webdriver_unittest)
 
 3. Test Doublex
-  * [python + unittest + doublex](https://github.com/DanteYu/Test_Automation_Demo/tree/master/TestDouble/python_unittest_doublex)
+   * [python + unittest + doublex](https://github.com/DanteYu/Test_Automation_Demo/tree/master/TestDouble/python_unittest_doublex)
