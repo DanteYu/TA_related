@@ -13,3 +13,5 @@ This repo will contain different test automation demo using different programmin
 
 3. Test Double
    * [python + unittest + doublex](https://github.com/DanteYu/Test_Automation_Demo/tree/master/TestDouble/python_unittest_doublex)
+   * [python + unittest + responses](https://github.com/DanteYu/Test_Automation_Demo/tree/master/TestDouble/python_unittest_responses)
+
