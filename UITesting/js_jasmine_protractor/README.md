@@ -1,4 +1,4 @@
-# UI Test Automation using *javascrip* + *protractor* + *jasmine*
+# UI Test Automation using *javascript* + *protractor* + *jasmine*
 
 
 ## Project Structure
