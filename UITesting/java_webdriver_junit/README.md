@@ -1,4 +1,4 @@
-# UI Test Automation using *java* + * selenium webdriver* + *junit*
+# UI Test Automation using *java* + *selenium webdriver* + *junit*
 
 ## Project Structure
 1. pages - contains all locators and basic page operation methods
