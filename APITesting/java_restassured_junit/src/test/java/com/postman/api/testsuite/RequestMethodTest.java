@@ -1,18 +1,10 @@
-package com.postman.api;
+package com.postman.api.testsuite;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
-import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
-import io.restassured.RestAssured;
-import io.restassured.config.EncoderConfig;
 import io.restassured.http.ContentType;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.specification.ResponseSpecification;
-import io.restassured.http.Method;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import io.restassured.response.Response;
 
@@ -105,7 +97,7 @@ public class RequestMethodTest {
     public void postRequestMultiPartTest() {
 
         given()
-                .multiPart(new File("/Users/diyu/workspace/java-demo/src/test/java/com/postman/api/filedata.txt"))
+                .multiPart(new File("/Users/diyu/workspace/java_restassured_junit/src/test/java/com/postman/api/resources/filedata.txt"))
                 .when()
                 .post("/post")
                 .then()

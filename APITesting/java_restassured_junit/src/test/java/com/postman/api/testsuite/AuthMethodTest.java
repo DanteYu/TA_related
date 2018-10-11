@@ -1,4 +1,4 @@
-package com.postman.api;
+package com.postman.api.testsuite;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;

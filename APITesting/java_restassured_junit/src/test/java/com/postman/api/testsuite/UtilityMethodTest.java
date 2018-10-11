@@ -1,25 +1,12 @@
-package com.postman.api;
+package com.postman.api.testsuite;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
-import io.restassured.RestAssured;
-import io.restassured.config.EncoderConfig;
-import io.restassured.http.ContentType;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.specification.ResponseSpecification;
-import io.restassured.http.Method;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import io.restassured.response.Response;
-
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 
 public class UtilityMethodTest {
 
