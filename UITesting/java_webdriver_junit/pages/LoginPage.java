@@ -59,7 +59,7 @@ public class LoginPage {
 
     private void fillEmail(String emailAddress){
         emailTextBox.sendKeys(emailAddress);
-}
+    }
 
     private void fillPassword(String password){
         passwordTextBox.sendKeys(password);
@@ -70,6 +70,5 @@ public class LoginPage {
         wait.until(ExpectedConditions.visibilityOf(element));
         return element.getText();
     }
-
 
 }
