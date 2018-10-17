@@ -67,7 +67,4 @@ public class UtilityMethodTest {
                 .body("ip", response -> equalTo(response.path("ip")));
 
     }
-
-
-
 }

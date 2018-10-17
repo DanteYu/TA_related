@@ -97,7 +97,7 @@ public class RequestMethodTest {
     public void postRequestMultiPartTest() {
 
         given()
-                .multiPart(new File("/Users/diyu/workspace/java_restassured_junit/src/test/java/com/postman/api/resources/filedata.txt"))
+                .multiPart(new File("/Users/diyu/workspace/java_restassured_junit/src/test/resources/filedata.txt"))
                 .when()
                 .post("/post")
                 .then()

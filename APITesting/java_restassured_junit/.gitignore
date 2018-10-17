@@ -1,6 +1,6 @@
-classes
 .idea
 build
 *.iml
 .gradle
 out
+classes

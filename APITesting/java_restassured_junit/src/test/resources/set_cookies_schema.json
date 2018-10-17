@@ -1,0 +1,16 @@
+{
+  "id": "https://example.com/geographical-location.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [ "cookies" ],
+  "properties": {
+    "cookies" : {
+      "type" : "object",
+      "properties": {
+        "foo1" : {"type" : "string"},
+        "foo2" : {"type" : "string"}
+      },
+      "required": [ "foo1", "foo2" ]
+    }
+  }
+}
