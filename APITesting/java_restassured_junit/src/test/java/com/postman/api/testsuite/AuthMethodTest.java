@@ -26,7 +26,6 @@ public class AuthMethodTest {
         builder.expectBody("authenticated", equalTo(true));
         ResponseSpecification responseSpec = builder.build();
 
-
         given().auth().preemptive().basic("postman", "password")
                 .when()
                 .get("/basic-auth")
